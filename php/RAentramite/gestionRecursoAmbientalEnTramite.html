@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management of Environmental Resources in Process</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Management of Environmental Resources in Process</h1>
+        <div class="container mt-3">
+            <a href="/github/golden.html" class="btn btn-primary mb-3">Back to Main Menu</a>
+        </div>
+
+        <div id="formularioRecursoAmbientalEnTramite">
+            <form id="formRecursoAmbientalEnTramite" class="mb-4">
+                <div class="form-group">
+                    <label for="numero">Environmental Resource Number:</label>
+                    <input type="text" class="form-control" id="numero" name="numero" placeholder="Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Project's name:</label>
+                    <select class="form-control" id="nombreProyecto" name="nombre" required>
+                        <!-- Las opciones de nombres de proyectos se cargarán aquí -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="causa">Cause:</label>
+                    <input type="text" class="form-control" id="causa" name="causa" placeholder="Cause">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Description:</label>
+                    <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fechaApertura">Opening date:</label>
+                    <input type="text" class="form-control" id="fechaApertura" name="fecha_apertura" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="region">Región:</label>
+                    <input type="text" class="form-control" id="region" name="region" placeholder="Region">
+                </div>
+                <div class="form-group">
+                    <label for="comuna">Commune:</label>
+                    <input type="text" class="form-control" id="comuna" name="comuna" placeholder="Commune">
+                </div>
+                <button type="submit" id="btnGuardarRecursoAmbientalEnTramite" class="btn btn-primary">Save Resource</button>
+            </form>
+        </div>
+
+
+        <div id="listaRecursosAmbientalesEnTramite" class="mt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Name</th>
+                        <th>Cause</th>
+                        <th>Description</th>
+                        <th>Opening Date</th>
+                        <th>Region</th>
+                        <th>Commune</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se mostrarán los recursos ambientales en trámite -->
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="gestionRecursoAmbientalEnTramite.js"></script>
+</body>
+</html>

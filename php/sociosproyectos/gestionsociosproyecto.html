@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner and Project Management</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Partner and Project Management</h1>
+        <div class="container mt-3">
+            <a href="/github/golden.html" class="btn btn-primary mb-3">Back to Main Menu</a>
+        </div>
+
+        <!-- Formulario para añadir asociación entre socio y proyecto -->
+        <div id="formularioSocioProyecto">
+            <form id="formSocioProyecto" class="mb-4">
+                <div class="form-group">
+                    <label for="nombreProyecto">PROJECT NAME:</label>
+                    <input type="text" class="form-control" id="nombreProyecto" name="nombreProyecto" required>
+                </div>
+                <div class="form-group">
+                    <label for="socioId">SELECT PARTNER:</label>
+                    <select class="form-control" id="socioId" name="socioId">
+                        <!-- Las opciones de los socios se cargarán aquí mediante JavaScript/AJAX -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nombreSocio">PARTNER NAME:</label>
+                    <input type="text" class="form-control" id="nombreSocio" name="nombreSocio" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="apellidosSocio">SURNAME OF THE PARTNER:</label>
+                    <input type="text" class="form-control" id="apellidosSocio" name="apellidosSocio" readonly>
+                </div>
+                <button type="submit" id="btnGuardarSocioProyecto" class="btn btn-primary">Associate Partner and Project</button>
+            </form>
+        </div>
+
+        <!-- Lista de asociaciones entre socios y proyectos -->
+        <div id="listaSociosProyectos" class="mt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name of Partner</th>
+                        <th>Member's Last Name</th>
+                        <th>Project Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los resultados se insertarán aquí -->
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Script para manejar las acciones de la interfaz de Socios y Proyectos -->
+    <script src="gestionSociosProyecto.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

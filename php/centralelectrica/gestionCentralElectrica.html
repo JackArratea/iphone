@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Plant Management</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Power Plant Management</h1>
+        <div class="container mt-3">
+            <a href="/github/golden.html" class="btn btn-primary mb-3">Back to Main Menu</a>
+        </div>
+        <form id="formCentralElectrica" method="POST" action="anadircentral.php">
+            <div class="form-group">
+                <label for="nombre">Project's name:</label>
+                <select class="form-control" id="nombre" name="nombre" required>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tipo_generacion">Generation Type:</label>
+                <input type="text" class="form-control" id="tipo_generacion" name="tipo_generacion" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+        
+
+        <div id="listaCentralesElectricas" class="mt-4">
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="gestionCentralElectrica.js"></script>
+</body>
+</html>

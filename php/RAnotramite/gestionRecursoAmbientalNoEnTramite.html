@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management of Environmental Resources Not in Process</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Management of Environmental Resources Not in Process</h1>
+        <div class="container mt-3">
+            <a href="/github/golden.html" class="btn btn-primary mb-3">Back to Main Menu</a>
+        </div>
+
+        <!-- Formulario para añadir o editar recursos ambientales no en trámite -->
+        <div id="formularioRecursoAmbientalNoEnTramite">
+            <form id="formRecursoAmbientalNoEnTramite" class="mb-4">
+                <div class="form-group">
+                    <label for="numero">Number:</label>
+                    <input type="text" class="form-control" id="numero" name="numero" placeholder="Number">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Project's name:</label>
+                    <select class="form-control" id="nombreProyecto" name="nombre" required>
+                        <!-- Las opciones de nombres de proyectos se cargarán aquí -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fechaDictamen">Opinion Date:</label>
+                    <input type="date" class="form-control" id="fechaDictamen" name="fecha_dictamen">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Description:</label>
+                    <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="causa">Cause:</label>
+                    <input type="text" class="form-control" id="causa" name="causa" placeholder="Cause">
+                </div>
+                <div class="form-group">
+                    <label for="fechaApertura">Opening date:</label>
+                    <input type="text" class="form-control" id="fechaApertura" name="fecha_apertura" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="region">Region:</label>
+                    <input type="text" class="form-control" id="region" name="region" placeholder="Region">
+                </div>
+                <div class="form-group">
+                    <label for="comuna">Commune:</label>
+                    <input type="text" class="form-control" id="comuna" name="comuna" placeholder="Comunne">
+                </div>
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <input type="text" class="form-control" id="status" name="status" placeholder="status">
+                </div>
+                <button type="submit" id="btnGuardarRecursoAmbientalNoEnTramite" class="btn btn-primary">Save Resource</button>
+            </form>
+        </div>
+
+        <!-- Agrega esta tabla después del formulario en tu HTML -->
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Project Name</th>
+            <th>Date of Opinion</th>
+            <th>Description</th>
+            <th>Cause</th>
+            <th>Opening Date</th>
+            <th>Region</th>
+            <th>Commune</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody id="tablaRecursosAmbientales"></tbody>
+</table>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="gestionRecursoAmbientalNoEnTramite.js"></script>
+</body>
+</html>
+
+
+
